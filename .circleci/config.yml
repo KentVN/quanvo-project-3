@@ -30,8 +30,8 @@ jobs:
             docker build -t udagram-frontend ./udagram-frontend
             docker tag udagram-frontend quanvt3/udagram-frontend:v1
 
-            docker build -t udagram-api-reverseproxy ./udagram-api-reverseproxy
-            docker tag udagram-api-reverseproxy quanvt3/udagram-api-reverseproxy:v1
+            docker build -t udagram-reverseproxy ./udagram-reverseproxy
+            docker tag udagram-reverseproxy quanvt3/udagram-reverseproxy:v1
 
             echo "-----------All images successfully built-----------"
 
@@ -44,7 +44,7 @@ jobs:
             docker push quanvt3/udagram-api-feed:v1
             docker push quanvt3/udagram-api-user:v1
             docker push quanvt3/udagram-frontend:v1
-            docker push quanvt3/udagram-api-reverseproxy:v1
+            docker push quanvt3/udagram-reverseproxy:v1
 
 workflows:
   default:
